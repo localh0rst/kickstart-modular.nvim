@@ -50,6 +50,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- Quick save
 vim.keymap.set('n', '<C-s>', ':w!<cr>', { desc = 'Save file' })
+vim.keymap.set('i', '<C-s>', '<ESC>:w!<cr>', { desc = 'Save file' })
 -- Quick quit
 vim.keymap.set('n', '<C-q>', ':q!<cr>', { desc = 'Force quit' })
 
