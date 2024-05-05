@@ -1,3 +1,4 @@
 [-Subroutines::ProhibitBuiltinHomonyms]
 [-Subroutines::ProhibitSubroutinePrototypes]
+[-Subroutines::ProhibitExplicitReturnUndef]
 
