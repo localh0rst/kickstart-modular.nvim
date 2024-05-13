@@ -1,7 +1,7 @@
 # Indentation
 -i=2
 # Line length
--l=100
+-l=120
 # Cuddled Else
 -ce
 # Welding nested containers
