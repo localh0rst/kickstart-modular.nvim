@@ -155,7 +155,20 @@ return {
       --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
+      local home_dir = vim.fn.expand '$HOME/.config/nvim/'
+      local perl_dir = vim.fn.expand '$HOME/' .. 'perl5/perlbrew/perls/perl-5.38.2/bin/perl'
       local servers = {
+        perlnavigator = {
+          settings = {
+            perlnavigator = {
+              perltidyProfile = home_dir .. '.perltidyrc',
+              perlPath = perl_dir,
+              perlcriticProfile = home_dir .. '.perlcriticrc',
+              perlcriticEnabled = true,
+            },
+          },
+        },
+
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
@@ -166,8 +179,7 @@ return {
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
-        -- tsserver = {},
-        --
+        tsserver = {},
 
         lua_ls = {
           -- cmd = {...},
